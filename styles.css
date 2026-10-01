@@ -1,0 +1,29 @@
+/*CSS by Lizzete Olavarrieta*/
+/*Color Palette
+Light green = #E1EBEB
+Dark green= #272929
+Dark gray= #646969
+Light gray= #B7BFBF
+Lightest green= #F4FFFF
+*/
+
+/*GLOBAL (base) MOBILE FIRST*/
+
+body{
+    background-color: #272929;
+}
+h1{
+    font-family: "Arial", cursive;
+    font-size: 3em;
+    font-weight: bold;
+    color: #E1EBEB;
+  }
+  h2 {
+    color: #E1EBEB;
+
+  }
+  
+  h3 {
+    color: #E1EBEB;
+
+  }
