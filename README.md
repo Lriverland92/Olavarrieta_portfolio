@@ -9,4 +9,4 @@
     Resume
 */
 
-URL: https://lriverland92.github.io/Olavarrieta_portfolio
+URL: https://lriverland92.github.io/OlavarrietaPortfolio
