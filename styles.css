@@ -9,7 +9,6 @@ Hot Pink = #fa1593
 Ice Blue = #95deff
 */
 
-
 body {
   background-color: #052240;
   color: #95deff;
@@ -69,10 +68,10 @@ nav a:focus-visible {
 }
 
 main {
-  padding: 30px 20px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 25px;
+  padding: 30px 20px;
 }
 
 section {
@@ -81,6 +80,8 @@ section {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  width: 100%;
 }
 
 section h2,
@@ -94,17 +95,12 @@ section p {
   margin-bottom: 20px;
 }
 
-.about-main {
-  grid-template-columns: 1fr;
-}
-
 footer {
   background-color: #750037;
   color: #95deff;
   text-align: center;
   padding: 15px;
 }
-
 
 .project-card img {
   width: 100%;
@@ -125,12 +121,12 @@ footer {
   opacity: 0.85;
 }
 
-
 .contact-links {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
 }
 
@@ -151,41 +147,56 @@ footer {
   color: #052240;
 }
 
-
 @media (min-width: 600px) {
   nav ul {
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   main {
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-main {
-      grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .contact-links {
-      flex-direction: row;
-      flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
-
 @media (min-width: 800px) {
   main {
-      max-width: 1100px;
-      margin: 0 auto;
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-main {
-      grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   nav a {
-      padding: 12px 20px;
+    padding: 12px 20px;
   }
+}
+
+.centered-main,
+.about-main {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.centered-main section,
+.about-main section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main:has(> section:only-child) {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
